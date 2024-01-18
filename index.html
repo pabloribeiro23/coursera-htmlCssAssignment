@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <title>Pizzeria</title>
+</head>
+<body>
+    <header id="header">
+        <img class="brand-logo" src="img/pizza-logo.png" alt="pizza-logo">
+        <nav class="navBar">
+            <ul class="navbar--items">
+                <li><a class="navbar--item" href="#">Home</a></li>
+                <li><a class="navbar--item" href="#aboutSection">About Us</a></li>
+                <li><a class="navbar--item" href="#productSection">Products</a></li>
+                <li><a class="navbar--item" href="#contactSection">Contact</a></li>              
+            </ul>
+        </nav>
+        <div class="responsiveMenu">
+            <button class="noStyleBtn position-relative navbar--item">
+                <i class="bi bi-cart navbar--item"></i>
+                <span id="cartNumber" class="position-absolute top-10 start-100 translate-middle badge bg-danger">0</span>
+            </button>
+            <div>
+                <button id="modalBtn" class="navbar--item">
+                    <svg id="modalBtnStroke" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                      </svg>
+                </button>
+
+                <div id="modalContent" style="display: none;">
+                    <button id="closeModal" class="navbar--item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M18 6l-12 12" />
+                            <path d="M6 6l12 12" />
+                          </svg>
+                    </button>
+                    <li><a class="navbar--item" href="#">Home</a></li>
+                    <li><a class="navbar--item" href="#aboutSection">About Us</a></li>
+                    <li><a class="navbar--item" href="#productSection">Products</a></li>
+                    <li><a class="navbar--item" href="#contactSection">Contact</a></li>  
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="homeSection" class="homeSection">
+            
+            <div id="homeSection--carousel" class="carousel slide" data-ride="carousel">
+                
+                <div class="carousel-inner" data-interval="2000"> 
+                    <div class="carousel-item active">
+                        <div class=" d-flex justify-content-evenly align-items-center">
+                            <h2 class="homeSlogan">Indulge in Slice <span class="mainRed-text">Perfection</span></h2>
+                            <img src="img/pizza1.png" alt="Pizza 1" class="d-block w-25">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-evenly align-items-center">
+                            <img src="img/pizza2.png" alt="Pizza 2" class="d-block w-25">
+                            <h2 class="homeSlogan">Where Every Bite is a Taste of <span class="mainRed-text">Italy</span>!</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#homeSection--carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#homeSection--carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </section>
+
+        <section id="aboutSection" class="aboutSection container">
+            <div class="d-flex chefInfo">
+                <img class="chefImg d-block" src="img/chefLorem.png" alt="chef lorem">
+                <div class="aboutParagraph">
+                    <h2 class="h2Content">Chef <span class="mainRed-text">Lorem Ipsum</span></h2>
+                    <p>Welcome to <span class="mainRed-text">Lorem Ipsum Pizzeria</span>, where <span class="mainRed-text">Chef Lorem Ipsum</span> creates the perfect pizza for your palate!
+                    Dive into a world of exquisite flavors and freshness as we <span class="mainRed-text">redefine pizza perfection.</span></p>
+                    <p>Our commitment to quality ensures each slice is a <span class="mainRed-text">culinary masterpiece</span>, inviting you to experience a symphony of taste in every bite.
+                    Join us in savoring the <span class="mainRed-text">finest ingredients</span> expertly combined to craft pizzas that are simply unparalleled. <span class="mainRed-text">Don't miss out on the excellence!</span></p>
+                </div>
+            </div>
+                    
+            <div class="text-center">
+                    <h2 class="mb-5 h2Content">What Makes Us Stand Out?</h2>
+                    <div class="d-md-flex justify-content-md-between mb-5 aboutIconsGrid">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-seeding" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 10a6 6 0 0 0 -6 -6h-3v2a6 6 0 0 0 6 6h3" />
+                                <path d="M12 14a6 6 0 0 1 6 -6h3v1a6 6 0 0 1 -6 6h-3" />
+                                <path d="M12 20l0 -10" />
+                            </svg>
+                            <h3>Fresh Ingredients</h3>
+                        </div>
+                    
+
+                        <div class="mx-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-motorbike" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M19 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M7.5 14h5l4 -4h-10.5m1.5 4l4 -4" />
+                                <path d="M13 6h2l1.5 3l2 4" />
+                            </svg>
+                            <h3>Fast Delivery</h3>
+                        </div>
+                
+
+                        <div class="mx-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pizza" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z" />
+                                <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479" />
+                                <path d="M13 11.01v-.01" />
+                                <path d="M11 14v-.01" />
+                            </svg>
+                            <h3>Lots of Flavours</h3>
+                        </div>
+                            
+
+                            
+                        <div class="mx-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 14m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+                                <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+                            </svg>
+                            <h3>Diet Friendly</h3>
+                        </div>
+                            
+
+                            
+                        <div class="mx-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-bag-discount" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12.5 21h-3.926a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304h11.339a2 2 0 0 1 1.977 2.304l-.416 2.7" />
+                                <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+                                <path d="M16 21l5 -5" />
+                                <path d="M21 21v.01" />
+                                <path d="M16 16v.01" />
+                            </svg>
+                            <h3>Lots of Promos!</h3>
+                        </div>
+                    </div> 
+            </div>
+        </section>
+
+        <section id="productSection" class="productSection">
+            <h2 class="productsTitle h2Content mainRed-text">Products</h2>
+            <div class="productSection--cards container">
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/all american.webp" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">All American</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/barbecue chicken.jpg" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Barbecue Ckicken</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/classic.jpg" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Classic</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/four cheese.webp" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Four Cheese</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/glutenfree.jpeg" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Gluten Free</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/glutenfree.jpg" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Supreme Gluten Free</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/hawaiian.jpg" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Hawaiian</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/neapolitan.jpg" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Neapolitan</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/veggie1.webp" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Veggie</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+
+                <div class="pizzaCard">
+                    <img class="pizzaImg" src="img/pizzaWbg/veggiesupreme.webp" alt="all american">
+                    <div class="pizzaCardInfo">
+                        <b class="pizzaName">Veggie Supreme</b>
+                        <p class="pizzaPrice">$12</p>
+                    </div>
+                    <button class="pizzaBtn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactSection">
+            <form id="contactSection" class="contactForm">
+                <h2 class="h2Content mainRed-text formTitle">Contact Us!</h2>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+                <button class="formBtn">Send</button>
+            </form>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

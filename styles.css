@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    color: white;
+}
+
+.brand-logo {
+    width: 110px;
+    height: 70px;
+}
+
+.navbar--items {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+.navbar--item {
+    text-decoration: none;
+    color: #fff;
+    transition: ease 0.1s;
+}
+
+.navbar--item:hover {
+    transform: scale(1.12);
+    color: #ee433e;
+}
+
+.bi-cart {
+    font-size: 25px;
+    padding: 0 45px;
+    font-weight: 600;
+}
+
+/*home bg*/
+.homeSection {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://wallpapercave.com/wp/wc1813160.jpg');
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: relative;
+}
+
+/*home content*/
+
+.homeSection {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.homeSlogan {
+    font-weight: 600;
+    cursor: default;
+}
+
+.aboutSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 5rem auto;
+    position: relative;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.h2Content {
+    font-weight: 600;
+}
+
+.chefImg {
+    width: 250px;
+    height: 250px;
+    box-shadow: -30px 30px 30px 5px rgba( 0,0,0,0.1);
+}
+
+.productsTitle {
+    text-align: center;
+    margin: 3rem auto;
+    padding-top: 3rem;
+}
+
+.productSection {
+    position: relative;
+    box-shadow: 0 0 10px 10px rgba( 0,0,0,0.1);
+    padding-bottom: 50px;
+}
+
+.productSection--cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+}
+
+.pizzaCard {
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 10px 10px rgba( 0,0,0,0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+
+.pizzaCard:hover {
+    transform: scale(1.2);
+}
+
+.pizzaCardInfo { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pizzaImg {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pizzaBtn {
+    background-color: #e4231e;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.pizzaBtn:hover {
+    transform: scale(1.05);
+}
+
+.contactSection {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://c4.wallpaperflare.com/wallpaper/748/744/935/pizza-fire-fast-food-food-wallpaper-preview.jpg');
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.formTitle {
+    text-align: center;
+}
+
+.contactForm {
+    width: 600px;
+    height: 500px;
+    background-color: rgba(255,255,255,1);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba( 0,0,0,0.1);
+}
+
+.contactForm label {
+    color: #e4231e;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.contactForm input {
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    margin-bottom: 1rem;
+}
+
+.contactForm textArea {
+    width: 100%;
+    height: 6rem;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    margin-bottom: 1rem;
+}
+
+.formBtn {
+    background-color: #e4231e;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+
+.formBtn:hover {
+    transform: scale(1.10);
+}
+
+.bg-white {
+    transition: ease 0.5s;
+}
+
+.mainRed-text {
+    color: #ee433e;
+    transition: ease 0.5s;
+}
+
+#modalBtn {
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+#closeModal {
+    border: none;
+    background-color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+.noStyleBtn {
+    width: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-right: 60px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar--items {
+        display: none;
+    }
+    #homeSection--carousel {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .chefInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .chefInfo img {
+        width: 50%;
+        height: 50%;
+        margin-bottom: 3rem;
+    }
+    .aboutIconsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+    .productSection--cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pizzaCard {
+        width: 45vw;
+    }
+    .contactForm {
+        width: 80vw;
+    }
+    #modalBtn {
+        display: inline;
+        padding-top: .6rem;
+    }
+    .bi-cart {
+        padding: 1.5rem;
+        margin: 0;
+    }
+    .responsiveMenu {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        padding-right: 50px;
+    }
+    #modalContent {
+        background-color: rgba(0, 0, 0, 0.9);
+        list-style: none;
+        width: 200px;
+        height: 100vh;
+        font-size: 2rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .pizzaCard:hover {
+        transform: scale(1.05);
+    }   
+    .noStyleBtn {
+        margin-right: 30px;
+    }
+}
